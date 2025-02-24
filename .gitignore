@@ -1,0 +1,53 @@
+# Ignore settings files and copies
+settings.toml
+settings*.toml
+settings - kopia*.toml
+settings copy*.toml
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+.venv/
+*.egg-info/
+Pipfile
+Pipfile.lock
+
+# Distribution / packaging
+build/
+dist/
+*.egg
+.eggs/
+*.tar.gz
+*.whl
+
+# Logs and temporary files
+logs/
+*.log
+*.bak
+*.tmp
+*.swp
+*.swo
+*.swn
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# macOS & Linux system files
+.DS_Store
+Thumbs.db
+*.orig
+
+# Testing & Coverage
+.tox/
+.nox/
+.coverage
+htmlcov/
+pytest_cache/
+__coverage__/
