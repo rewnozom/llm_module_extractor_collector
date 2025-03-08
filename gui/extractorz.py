@@ -364,14 +364,17 @@ class MarkdownEx:
 
         output_dir = self.settings['paths']['output_dir']
         presets = self.settings.get('presets', {})
-        total_presets = len(presets)
+        
+        # Filter out the 'current_preset' key from presets
+        preset_names = [name for name in presets.keys() if name != 'current_preset']
+        total_presets = len(preset_names)
 
         if total_presets == 0:
             if self.update_status:
                 self.update_status("No presets found in settings")
             return
 
-        for idx, preset_name in enumerate(presets, 1):
+        for idx, preset_name in enumerate(preset_names, 1):
             if not self._is_running:
                 if self.update_status:
                     self.update_status("Markdown extraction stopped by user.")
@@ -385,6 +388,11 @@ class MarkdownEx:
                 os.makedirs(preset_output_dir, exist_ok=True)
 
                 specific_files = presets[preset_name]
+                # Skip if preset_name is 'current_preset' or specific_files is not a list
+                if preset_name == 'current_preset' or not isinstance(specific_files, list):
+                    print(f"Skipping preset '{preset_name}': Not a valid preset or file list")
+                    continue
+                    
                 file_paths = [
                     os.path.normpath(os.path.join(self.base_dir, file)).replace('\\', '/')
                     for file in specific_files
@@ -691,14 +699,16 @@ class CSVEx:
                 self.update_status("Starting extraction process...")
 
             presets = self.settings.get('presets', {})
-            total_presets = len(presets)
+            # Filter out the 'current_preset' key from presets
+            preset_names = [name for name in presets.keys() if name != 'current_preset']
+            total_presets = len(preset_names)
 
             if total_presets == 0:
                 if self.update_status:
                     self.update_status("No presets found in settings")
                 return
 
-            for idx, preset_name in enumerate(presets, 1):
+            for idx, preset_name in enumerate(preset_names, 1):
                 if not self._is_running:
                     if self.update_status:
                         self.update_status("CSV extraction stopped by user.")
@@ -712,6 +722,11 @@ class CSVEx:
                     os.makedirs(preset_output_dir, exist_ok=True)
 
                     specific_files = presets[preset_name]
+                    # Skip if preset_name is 'current_preset' or specific_files is not a list
+                    if preset_name == 'current_preset' or not isinstance(specific_files, list):
+                        print(f"Skipping preset '{preset_name}': Not a valid preset or file list")
+                        continue
+
                     file_paths = [
                         os.path.normpath(os.path.join(self.base_dir, file))
                         for file in specific_files

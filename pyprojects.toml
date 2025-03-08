@@ -1,0 +1,22 @@
+[project]
+name="Project Module-Extractor Manager"
+version = "2.0.0"
+description="Project Module-Extractor Manager is a flexible tool designed to efficiently gather, manage, and organize modules and components for `working with Large Language Models (LLMs)`. It enables fast and optimized extraction of code-based components into `Markdown` or `CSV`, streamlining workflows and making it easier to manage modular structures using `presets`."
+authors = [
+  { name = "Tobias Raanaes" }
+]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "PySide6>=6.0",
+  "toml>=0.10.2",
+  "pandas>=1.0",
+  "xlsxwriter>=3.0"
+]
+
+[project.urls]
+"Homepage" = "https://example.com/project-manager"
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
