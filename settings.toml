@@ -1,6 +1,6 @@
 [paths]
-base_dir = ""
-output_dir = ""
+base_dir = "E:/_Development_/DEVELOPMENT/Rewnozom-github/llm_module_extractor_collector"
+output_dir = "E:/_Development_/DEVELOPMENT/Rewnozom-github/llm_module_extractor_collector\\output"
 select_csv_reverse_file = ""
 select_csv_output_reverse_dir = ""
 select_markdown_reverse_file = ""
@@ -26,4 +26,5 @@ csv_file_prefix = "Detailed_Project"
 size_unit = "KB"
 
 [presets]
-preset-1 = []
+preset-1 = [ "E:/_Development_/DEVELOPMENT/Rewnozom-github/llm_module_extractor_collector/gui/settings_frame.py", "E:/_Development_/DEVELOPMENT/Rewnozom-github/llm_module_extractor_collector/main.py", "E:/_Development_/DEVELOPMENT/Rewnozom-github/llm_module_extractor_collector/gui/extraction_frame.py", "E:/_Development_/DEVELOPMENT/Rewnozom-github/llm_module_extractor_collector/gui/file_specific_frame.py", "E:/_Development_/DEVELOPMENT/Rewnozom-github/llm_module_extractor_collector/gui/theme_manager.py", "E:/_Development_/DEVELOPMENT/Rewnozom-github/llm_module_extractor_collector/gui/settings_manager.py", "E:/_Development_/DEVELOPMENT/Rewnozom-github/llm_module_extractor_collector/gui/constants.py", "E:/_Development_/DEVELOPMENT/Rewnozom-github/llm_module_extractor_collector/gui/extraction_worker.py", "E:/_Development_/DEVELOPMENT/Rewnozom-github/llm_module_extractor_collector/gui/header_frame.py", "E:/_Development_/DEVELOPMENT/Rewnozom-github/llm_module_extractor_collector/gui/extractorz.py", "E:/_Development_/DEVELOPMENT/Rewnozom-github/llm_module_extractor_collector/gui/__init__.py", "E:/_Development_/DEVELOPMENT/Rewnozom-github/llm_module_extractor_collector/gui/main_window.py",]
+current_preset = "preset-1"

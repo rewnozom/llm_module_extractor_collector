@@ -3,6 +3,9 @@
 ## 📌 **Overview**
 **LLM Module Extractor & Collector** is a powerful and flexible tool designed to efficiently gather, manage, and organize modules and components for **working with Large Language Models (LLMs)**. It enables fast and optimized extraction of code-based components into **Markdown** or **CSV**, streamlining workflows and making it easier to manage modular structures using **presets**.
 
+![Module Extractor Screenshot](assets/gui.png)
+> see inside "./example/output/preset-1"
+
 ### 🚀 **Key Features:**
 - **📂 Preset Management:** Create and manage different **presets** for specific modules or components.
 - **📋 Automatic Extraction:** Collect all selected modules into a structured **Markdown** or **CSV** file.
